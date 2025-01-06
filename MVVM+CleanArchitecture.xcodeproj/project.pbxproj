@@ -19,6 +19,8 @@
 		1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FEC2D2C2CA600074D18 /* UserListItem.swift */; };
 		1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FEE2D2C2E2C00074D18 /* NetworkError.swift */; };
 		1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF02D2C2FB400074D18 /* CoreDataError.swift */; };
+		1D993FF32D2C315200074D18 /* UserListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF22D2C315200074D18 /* UserListUsecase.swift */; };
+		1D993FF62D2C345000074D18 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF52D2C345000074D18 /* UserRepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1D993FEC2D2C2CA600074D18 /* UserListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListItem.swift; sourceTree = "<group>"; };
 		1D993FEE2D2C2E2C00074D18 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1D993FF02D2C2FB400074D18 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		1D993FF22D2C315200074D18 /* UserListUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUsecase.swift; sourceTree = "<group>"; };
+		1D993FF52D2C345000074D18 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		1D993FE92D2C2C7700074D18 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				1D993FF42D2C343B00074D18 /* RepositoryProtocol */,
 				1D993FEB2D2C2C8500074D18 /* Usecase */,
 				1D993FEA2D2C2C7C00074D18 /* Entity */,
 			);
@@ -156,8 +161,17 @@
 		1D993FEB2D2C2C8500074D18 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
+				1D993FF22D2C315200074D18 /* UserListUsecase.swift */,
 			);
 			path = Usecase;
+			sourceTree = "<group>";
+		};
+		1D993FF42D2C343B00074D18 /* RepositoryProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				1D993FF52D2C345000074D18 /* UserRepositoryProtocol.swift */,
+			);
+			path = RepositoryProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D993FF62D2C345000074D18 /* UserRepositoryProtocol.swift in Sources */,
 				1D993FBE2D2C28EF00074D18 /* ViewController.swift in Sources */,
+				1D993FF32D2C315200074D18 /* UserListUsecase.swift in Sources */,
 				1D993FBA2D2C28EF00074D18 /* AppDelegate.swift in Sources */,
 				1D993FBC2D2C28EF00074D18 /* SceneDelegate.swift in Sources */,
 				1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */,
