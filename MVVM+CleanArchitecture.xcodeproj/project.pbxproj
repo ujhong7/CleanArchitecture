@@ -16,6 +16,9 @@
 		1D993FD12D2C28F000074D18 /* MVVM_CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FD02D2C28F000074D18 /* MVVM_CleanArchitectureTests.swift */; };
 		1D993FDB2D2C28F000074D18 /* MVVM_CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FDA2D2C28F000074D18 /* MVVM_CleanArchitectureUITests.swift */; };
 		1D993FDD2D2C28F000074D18 /* MVVM_CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FDC2D2C28F000074D18 /* MVVM_CleanArchitectureUITestsLaunchTests.swift */; };
+		1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FEC2D2C2CA600074D18 /* UserListItem.swift */; };
+		1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FEE2D2C2E2C00074D18 /* NetworkError.swift */; };
+		1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF02D2C2FB400074D18 /* CoreDataError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1D993FD62D2C28F000074D18 /* MVVM+CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM+CleanArchitectureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D993FDA2D2C28F000074D18 /* MVVM_CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CleanArchitectureUITests.swift; sourceTree = "<group>"; };
 		1D993FDC2D2C28F000074D18 /* MVVM_CleanArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CleanArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D993FEC2D2C2CA600074D18 /* UserListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListItem.swift; sourceTree = "<group>"; };
+		1D993FEE2D2C2E2C00074D18 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1D993FF02D2C2FB400074D18 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				1D993FB92D2C28EF00074D18 /* AppDelegate.swift */,
 				1D993FBB2D2C28EF00074D18 /* SceneDelegate.swift */,
 				1D993FBD2D2C28EF00074D18 /* ViewController.swift */,
+				1D993FE92D2C2C7700074D18 /* Domain */,
 				1D993FBF2D2C28EF00074D18 /* Main.storyboard */,
 				1D993FC22D2C28F000074D18 /* Assets.xcassets */,
 				1D993FC42D2C28F000074D18 /* LaunchScreen.storyboard */,
@@ -125,6 +132,32 @@
 				1D993FDC2D2C28F000074D18 /* MVVM_CleanArchitectureUITestsLaunchTests.swift */,
 			);
 			path = "MVVM+CleanArchitectureUITests";
+			sourceTree = "<group>";
+		};
+		1D993FE92D2C2C7700074D18 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1D993FEB2D2C2C8500074D18 /* Usecase */,
+				1D993FEA2D2C2C7C00074D18 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1D993FEA2D2C2C7C00074D18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1D993FEC2D2C2CA600074D18 /* UserListItem.swift */,
+				1D993FEE2D2C2E2C00074D18 /* NetworkError.swift */,
+				1D993FF02D2C2FB400074D18 /* CoreDataError.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1D993FEB2D2C2C8500074D18 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +294,9 @@
 				1D993FBE2D2C28EF00074D18 /* ViewController.swift in Sources */,
 				1D993FBA2D2C28EF00074D18 /* AppDelegate.swift in Sources */,
 				1D993FBC2D2C28EF00074D18 /* SceneDelegate.swift in Sources */,
+				1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */,
+				1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */,
+				1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
