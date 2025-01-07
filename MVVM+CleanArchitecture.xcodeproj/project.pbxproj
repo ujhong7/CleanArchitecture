@@ -27,6 +27,7 @@
 		1D9940022D2D735200074D18 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940012D2D735200074D18 /* UserNetwork.swift */; };
 		1D9940052D2D759200074D18 /* MVVM+CleanArchitecture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940032D2D759200074D18 /* MVVM+CleanArchitecture.xcdatamodeld */; };
 		1D9940072D2D782700074D18 /* UserCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940062D2D782700074D18 /* UserCoreData.swift */; };
+		1D9940092D2D886F00074D18 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940082D2D886F00074D18 /* UserRepository.swift */; };
 		44D2ACD4F2EB8ADF9DC3570F /* Pods_MVVM_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */; };
 		59145616A13D532937740833 /* Pods_MVVM_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ABEF76B408CC46CF6E17FA /* Pods_MVVM_CleanArchitectureTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		1D9940012D2D735200074D18 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		1D9940042D2D759200074D18 /* MVVM+CleanArchitecture.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MVVM+CleanArchitecture.xcdatamodel"; sourceTree = "<group>"; };
 		1D9940062D2D782700074D18 /* UserCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreData.swift; sourceTree = "<group>"; };
+		1D9940082D2D886F00074D18 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		214BAB9C743658FB4B311F6E /* Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253F409B6D17DF9AEB7B889 /* Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		1D993FFA2D2CBA6E00074D18 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				1D9940082D2D886F00074D18 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				1D9940022D2D735200074D18 /* UserNetwork.swift in Sources */,
 				1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */,
 				1D993FFC2D2CC21600074D18 /* UserSession.swift in Sources */,
+				1D9940092D2D886F00074D18 /* UserRepository.swift in Sources */,
 				1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */,
 				1D9940072D2D782700074D18 /* UserCoreData.swift in Sources */,
 				1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */,
