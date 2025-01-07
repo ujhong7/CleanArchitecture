@@ -11,7 +11,11 @@ import Alamofire
 // 구현단 NetworkManager(session: UserSession())
 // 테스트 NetworkManager(session: MockSession())
 
-public class NetworkManager {
+protocol NetworkManagerProtocol {
+    func fetchData<T: Decodable>(url: String, method: HTTPMethod, parameters: Parameters?) async -> Result<T, NetworkError>
+}
+
+public class NetworkManager: NetworkManagerProtocol {
     
     private let session: SessionProtocol
     
