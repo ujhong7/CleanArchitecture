@@ -33,7 +33,7 @@ public struct UserListItem: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case login
+        case login 
         case imageURL = "avatar_url"
     }
     
