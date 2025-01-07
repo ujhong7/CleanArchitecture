@@ -22,6 +22,8 @@
 		1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF02D2C2FB400074D18 /* CoreDataError.swift */; };
 		1D993FF32D2C315200074D18 /* UserListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF22D2C315200074D18 /* UserListUsecase.swift */; };
 		1D993FF62D2C345000074D18 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FF52D2C345000074D18 /* UserRepositoryProtocol.swift */; };
+		1D993FFC2D2CC21600074D18 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FFB2D2CC21600074D18 /* UserSession.swift */; };
+		1D993FFE2D2D673A00074D18 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D993FFD2D2D673A00074D18 /* NetworkManager.swift */; };
 		44D2ACD4F2EB8ADF9DC3570F /* Pods_MVVM_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */; };
 		59145616A13D532937740833 /* Pods_MVVM_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ABEF76B408CC46CF6E17FA /* Pods_MVVM_CleanArchitectureTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		1D993FF02D2C2FB400074D18 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 		1D993FF22D2C315200074D18 /* UserListUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUsecase.swift; sourceTree = "<group>"; };
 		1D993FF52D2C345000074D18 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		1D993FFB2D2CC21600074D18 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		1D993FFD2D2D673A00074D18 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		214BAB9C743658FB4B311F6E /* Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253F409B6D17DF9AEB7B889 /* Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 				E1182B9B52D6D891BB781C34 /* Pods-MVVM+CleanArchitectureTests.debug.xcconfig */,
 				0717BEE962EAFEC4F4460FEF /* Pods-MVVM+CleanArchitectureTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,6 +222,8 @@
 		1D993FF82D2CBA6600074D18 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1D993FFB2D2CC21600074D18 /* UserSession.swift */,
+				1D993FFD2D2D673A00074D18 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -488,10 +493,12 @@
 			files = (
 				1D993FF62D2C345000074D18 /* UserRepositoryProtocol.swift in Sources */,
 				1D993FBE2D2C28EF00074D18 /* ViewController.swift in Sources */,
+				1D993FFE2D2D673A00074D18 /* NetworkManager.swift in Sources */,
 				1D993FF32D2C315200074D18 /* UserListUsecase.swift in Sources */,
 				1D993FBA2D2C28EF00074D18 /* AppDelegate.swift in Sources */,
 				1D993FBC2D2C28EF00074D18 /* SceneDelegate.swift in Sources */,
 				1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */,
+				1D993FFC2D2CC21600074D18 /* UserSession.swift in Sources */,
 				1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */,
 				1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */,
 			);
