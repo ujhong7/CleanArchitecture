@@ -19,7 +19,7 @@ class UserSession: SessionProtocol {
     
     private var session: Session
     
-    init(session: Session) {
+    init() {
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .returnCacheDataElseLoad
         self.session = Session(configuration: config)
