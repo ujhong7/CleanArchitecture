@@ -21,6 +21,7 @@ public final class UserListViewModel: UserListViewModelProtocol {
     private let fetchUserList = BehaviorRelay<[UserListItem]>(value: [])
     private let allFavoriteUserList = BehaviorRelay<[UserListItem]>(value: []) // 즐겨찾기 여부를 위한 전체목록
     private let favoriteUserList = BehaviorRelay<[UserListItem]>(value: []) // 목록에 보여줄 리스트
+    private var page: Int = 1
     
     public init(usecase: UserListUsecaseProtocol) {
         self.usecase = usecase
@@ -45,12 +46,13 @@ public final class UserListViewModel: UserListViewModelProtocol {
         
         input.query.bind { [weak self] query in
             // user Fetch and get favorite Users
-            guard let isValidate = self?.validateQuery(query: query), isValidate else {
+            guard let self = self, validateQuery(query: query) else {
                 self?.getFavoriteUsers(query: "")
                 return
             }
-            self?.fetchUser(query: query, page: 0)
-            self?.getFavoriteUsers(query: query)
+            page = 1
+            fetchUser(query: query, page: page)
+            getFavoriteUsers(query: query)
         }.disposed(by: disposeBag)
         
         input.saveFavorite
@@ -67,20 +69,50 @@ public final class UserListViewModel: UserListViewModelProtocol {
                 return (users, query)
             })
             .bind { userID, query in
-            // 즐겨찾기 삭제
+                // 즐겨찾기 삭제
                 self.deleteFavoriteUser(userID: userID, query: query)
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
-        input.fetchMore.bind {
-            // TODO: 다음 페이지 검색
-        }.disposed(by: disposeBag)
+        input.fetchMore
+            .withLatestFrom(input.query)
+            .bind { [weak self] query in
+                // 다음 페이지 검색
+                guard let self = self else { return }
+                page += 1
+                fetchUser(query: query, page: page)
+            }.disposed(by: disposeBag)
         
         // 유저리스트 탭, 즐겨찾기 탭
-        let cellData: Observable<[UserListCellData]> = Observable.combineLatest(input.tabButtonType, fetchUserList, favoriteUserList).map { tabButtonType, fetchUserList, favoriteUserList in
-            let cellData: [UserListCellData] = []
-            // TODO: celldata 생성
-            return cellData
-        }
+        let cellData: Observable<[UserListCellData]> = Observable.combineLatest(input.tabButtonType, fetchUserList, favoriteUserList, allFavoriteUserList)
+            .map { [weak self] tabButtonType, fetchUserList, favoriteUserList, allFavoriteUserList in
+                
+                var cellData: [UserListCellData] = []
+                // celldata 생성
+                guard let self = self else { return cellData }
+                switch tabButtonType {
+                case .api:
+                    // Tab 타입에 따라 fetchUser List
+                    let tuple = usecase.checkFavoriteState(fetchUsers: fetchUserList, favoriteUsers: allFavoriteUserList)
+                    let userCellList = tuple.map { user, isFavorite in
+                        UserListCellData.user(user: user, isFavorite: isFavorite)
+                    }
+                    return userCellList
+                case .favorite:
+                    // Tab 타입에 따라 favoriteUser List
+                    let dict = usecase.convertListToDictionary(favoriteUsers: favoriteUserList)
+                    let keys = dict.keys.sorted() // key : [User list]
+                    keys.forEach { key in
+                        cellData.append(.header(key))
+                        if let users = dict[key] {
+                            let userListCell = users.map { user in
+                                UserListCellData.user(user: user, isFavorite: true)
+                            }
+                            cellData += userListCell
+                        }
+                    }
+                }
+                return cellData
+            }
         
         return Output(cellData: cellData, error: error.asObservable())
     }
