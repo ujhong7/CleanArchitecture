@@ -8,11 +8,12 @@
 import UIKit
 import SnapKit
 import Kingfisher
+import RxSwift
 
 final class UserTableViewCell: UITableViewCell {
     
     static let id = "UserTableViewCell"
-    
+    public var disposeBag = DisposeBag()
     private let userImageView = {
         let imageView = UIImageView()
         imageView.layer.borderColor = UIColor.systemGray.cgColor
@@ -27,13 +28,21 @@ final class UserTableViewCell: UITableViewCell {
         label.numberOfLines = 2
         return label
     }()
+    public let favoriteButton = {
+        let button = UIButton()
+        button.setImage(.init(systemName: "heart"), for: .normal)
+        button.setImage(.init(systemName: "heart.fill"), for: .selected)
+        button.tintColor = .red
+        return button
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addSubview(userImageView)
-        addSubview(nameLabel)
-         
+        contentView.addSubview(userImageView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(favoriteButton)
+        
         userImageView.snp.makeConstraints { make in
             make.leading.top.bottom.equalToSuperview().inset(20)
             make.width.height.equalTo(80)
@@ -43,12 +52,23 @@ final class UserTableViewCell: UITableViewCell {
             make.leading.equalTo(userImageView.snp.trailing).offset(8)
             make.trailing.equalToSuperview().inset(20)
         }
+        favoriteButton.snp.makeConstraints { make in
+            make.width.height.equalTo(40)
+            make.centerY.equalToSuperview()
+            make.trailing.equalTo(-20)
+        }
     }
     
     func apply(cellData: UserListCellData) {
         guard case let .user(user, isFavorite) = cellData else { return }
         userImageView.kf.setImage(with: URL(string: user.imageURL))
         nameLabel.text = user.login
+        favoriteButton.isSelected = isFavorite
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
     
     required init?(coder: NSCoder) {

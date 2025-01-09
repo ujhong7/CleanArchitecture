@@ -143,7 +143,7 @@ public final class UserListViewModel: UserListViewModelProtocol {
                 favoriteUserList.accept(users)
             } else {
                 let filterdUsers = users.filter { user in
-                    user.login.contains(query)
+                    user.login.contains(query.lowercased())
                 }
                 favoriteUserList.accept(filterdUsers)
             }
