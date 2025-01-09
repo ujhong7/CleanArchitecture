@@ -33,9 +33,9 @@ class UserListViewController: UIViewController {
     private let tabButtonView = TabButtonView(tabList: [.api, .favorite])
     private let tableView = {
         let tableView = UITableView()
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.id)
         return tableView
     }()
-    
     
     init(viewModel: UserListViewModelProtocol) {
         self.viewModel = viewModel
@@ -52,8 +52,10 @@ class UserListViewController: UIViewController {
         
         let output = viewModel.transform(input: UserListViewModel.Input(tabButtonType: tabButtonType, query: query, saveFavorite: saveFavorite.asObservable(), deleteFavorite: deleteFavorite.asObservable(), fetchMore: fetchMore.asObservable()))
         
-        output.cellData.bind(to: tableView.rx.items) { tableView, index, item in
-            return UITableViewCell()
+        output.cellData.bind(to: tableView.rx.items) { tableView, index, cellData in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.id) else { return UITableViewCell() }
+            (cell as? UserTableViewCell)?.apply(cellData: cellData)
+            return cell
         }.disposed(by: disposeBag)
         
         output.error.bind { [weak self] errorMessage in
@@ -97,70 +99,6 @@ class UserListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-}
-
-final class TabButtonView: UIStackView {
-    private let tabList: [TabButtonType]
-    private let disposeBag = DisposeBag()
-    public let selectedType: BehaviorRelay<TabButtonType?>
-    
-    init(tabList: [TabButtonType]) {
-        self.tabList = tabList
-        self.selectedType = BehaviorRelay(value: tabList.first)
-        super.init(frame: .zero)
-        alignment = .fill
-        distribution = .fillEqually
-        
-        addButtons()
-        (arrangedSubviews.first as? UIButton)?.isSelected = true
-    }
-    
-    private func addButtons() {
-        tabList.forEach { tabType in
-            let button = TabButton(type: tabType)
-            button.rx.tap.bind { [weak self] in
-                self?.arrangedSubviews.forEach({ view in
-                    (view as? UIButton)?.isSelected = false
-                })
-                button.isSelected = true
-                self?.selectedType.accept(tabType)
-            }.disposed(by: disposeBag)
-            addArrangedSubview(button)
-        }
-    }
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-}
-
-final class TabButton: UIButton {
-    private let type: TabButtonType
-    
-    override var isSelected: Bool {
-        didSet {
-            if isSelected {
-                backgroundColor = .systemCyan
-            } else {
-                backgroundColor = .white
-            }
-        }
-    }
-    
-    init(type: TabButtonType) {
-        self.type = type
-        super.init(frame: .zero)
-        setTitle(type.rawValue, for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
-        setTitleColor(.black, for: .normal)
-        setTitleColor(.white, for: .selected)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

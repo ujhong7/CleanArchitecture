@@ -29,6 +29,8 @@
 		1D99400B2D2E1CE100074D18 /* UserUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99400A2D2E1CE100074D18 /* UserUsecaseTests.swift */; };
 		1D9940102D2E228000074D18 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99400F2D2E228000074D18 /* MockUserRepository.swift */; };
 		1D9940142D2E369700074D18 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940132D2E369700074D18 /* UserListViewModel.swift */; };
+		1D9940172D2F771500074D18 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940162D2F771500074D18 /* TabButtonView.swift */; };
+		1D9940192D2F775C00074D18 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940182D2F775C00074D18 /* UserTableViewCell.swift */; };
 		44D2ACD4F2EB8ADF9DC3570F /* Pods_MVVM_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */; };
 		59145616A13D532937740833 /* Pods_MVVM_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ABEF76B408CC46CF6E17FA /* Pods_MVVM_CleanArchitectureTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		1D99400A2D2E1CE100074D18 /* UserUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecaseTests.swift; sourceTree = "<group>"; };
 		1D99400F2D2E228000074D18 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		1D9940132D2E369700074D18 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		1D9940162D2F771500074D18 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		1D9940182D2F775C00074D18 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		214BAB9C743658FB4B311F6E /* Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253F409B6D17DF9AEB7B889 /* Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 		1D9940112D2E282C00074D18 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1D9940152D2F770200074D18 /* View */,
 				1D9940122D2E283300074D18 /* ViewModel */,
 			);
 			path = Presentation;
@@ -279,6 +284,15 @@
 				1D9940132D2E369700074D18 /* UserListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D9940152D2F770200074D18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D9940162D2F771500074D18 /* TabButtonView.swift */,
+				1D9940182D2F775C00074D18 /* UserTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2483C6B2A141DE4878FAE761 /* Frameworks */ = {
@@ -540,8 +554,10 @@
 				1D993FED2D2C2CA600074D18 /* UserListItem.swift in Sources */,
 				1D993FFC2D2CC21600074D18 /* UserSession.swift in Sources */,
 				1D9940092D2D886F00074D18 /* UserRepository.swift in Sources */,
+				1D9940172D2F771500074D18 /* TabButtonView.swift in Sources */,
 				1D993FEF2D2C2E2C00074D18 /* NetworkError.swift in Sources */,
 				1D9940072D2D782700074D18 /* UserCoreData.swift in Sources */,
+				1D9940192D2F775C00074D18 /* UserTableViewCell.swift in Sources */,
 				1D993FF12D2C2FB400074D18 /* CoreDataError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
