@@ -72,20 +72,7 @@ ViewController (화면 업데이트)
 
 --- 
 
-## 예제
 
-
-
-
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/8ff58980-70bc-43fc-b793-8de4a38e62ac" />
-
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/cc951c2b-9ee1-45ca-ad2c-21d28fa074e8" />
-
-<img width="715" alt="image" src="https://github.com/user-attachments/assets/e648fd58-9208-4e75-a662-7b7836277fce" />
-
-<img width="687" alt="image" src="https://github.com/user-attachments/assets/482a7276-35a5-43ac-b993-8262eb773eb3" />
-
-<img width="685" alt="image" src="https://github.com/user-attachments/assets/c0385529-b5f4-4294-bd10-c748280b642a" />
 
 
 
