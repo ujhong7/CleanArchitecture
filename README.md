@@ -46,6 +46,55 @@
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/090f0d61-5269-4dc3-aa22-61f57710a093" />
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/a134fa91-00e6-4d40-80f1-83530da95e11" />
 
+---
+
+## 데이터 흐름 구조
+
+```plaintext
+ViewController
+     ↓ (이벤트 전달)
+ViewModel
+     ↓ (로직 실행)
+Use Case
+     ↓ (데이터 요청)
+Repository
+     ↓
+Data Source (API/DB)
+     ↑
+Repository
+     ↑ (결과 반환)
+Use Case
+     ↑
+ViewModel
+     ↑ (바인딩)
+ViewController (화면 업데이트)
+```
+
+--- 
+
+## 예제
+
+- `UserListViewController` : 이벤트 전달
+
+  
+- `UserListViewModel` : 로직 실행
+
+  
+- `UserListUsecase` : 데이터 요청
+
+  
+- `UserRepository` : 결과반환
+
+  
+- `UserCoreData`
+
+  
+- `UserListViewModel` : 바인딩
+
+
+
+
+
 
 
 
