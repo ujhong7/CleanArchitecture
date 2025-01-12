@@ -72,10 +72,10 @@ ViewController (화면 업데이트)
 
 --- 
 
-## 예제
-- 동작  
+## 예제  
 <img src="https://i.imgur.com/fdmxUii.gif" alt="Description of GIF" width="250"/>
 
+### 하트버튼 눌러서 코어데이터 저장하기
 - `UserListViewController` : 이벤트 전달    
 ![image](https://github.com/user-attachments/assets/df5b57a6-0ab8-44df-8d50-a5824eb47038)   
 ![image](https://github.com/user-attachments/assets/c44fd059-1b06-4f09-8f39-50426a191a72)    
