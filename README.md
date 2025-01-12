@@ -26,7 +26,7 @@
 
 ---
 
-## 2. Repository: 데이터 계층
+## 2. Data: 데이터 계층
 
 - 로컬 데이터베이스 또는 원격 서버(API)와 통신하며, 데이터를 가공하여 도메인 계층에 전달.
 - 데이터 소스와 도메인 계층 사이의 **중재자 역할**을 수행.
@@ -74,22 +74,19 @@ ViewController (화면 업데이트)
 
 ## 예제
 
-- `UserListViewController` : 이벤트 전달
 
-  
-- `UserListViewModel` : 로직 실행
 
-  
-- `UserListUsecase` : 데이터 요청
 
-  
-- `UserRepository` : 결과반환
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/8ff58980-70bc-43fc-b793-8de4a38e62ac" />
 
-  
-- `UserCoreData`
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/cc951c2b-9ee1-45ca-ad2c-21d28fa074e8" />
 
-  
-- `UserListViewModel` : 바인딩
+<img width="715" alt="image" src="https://github.com/user-attachments/assets/e648fd58-9208-4e75-a662-7b7836277fce" />
+
+<img width="687" alt="image" src="https://github.com/user-attachments/assets/482a7276-35a5-43ac-b993-8262eb773eb3" />
+
+<img width="685" alt="image" src="https://github.com/user-attachments/assets/c0385529-b5f4-4294-bd10-c748280b642a" />
+
 
 
 
