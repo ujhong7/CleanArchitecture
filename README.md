@@ -72,11 +72,28 @@ ViewController (화면 업데이트)
 
 --- 
 
+## 예제
+
+- `UserListViewController` : 이벤트 전달    
+![image](https://github.com/user-attachments/assets/df5b57a6-0ab8-44df-8d50-a5824eb47038)   
+![image](https://github.com/user-attachments/assets/c44fd059-1b06-4f09-8f39-50426a191a72)    
+
+- `UserListViewModel` : 로직 실행  
+![image](https://github.com/user-attachments/assets/b936ce1a-5925-42f8-b205-20742881316f)   
+![image](https://github.com/user-attachments/assets/622a1eff-f305-43d6-a462-95fec8e10828)   
+![image](https://github.com/user-attachments/assets/0809518f-93f5-418a-9544-8c3304bd536d)   
 
 
 
-
-
+  
+- `UserListUsecase` : 데이터 요청  
+  
+- `UserRepository` : 결과반환  
+  
+- `UserCoreData`
+  
+- `UserListViewModel` : 바인딩  
+![image](https://github.com/user-attachments/assets/c816fdab-44c4-49e4-bc82-4525f9101cd0)
 
 
 
