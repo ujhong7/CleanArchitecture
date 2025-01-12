@@ -81,19 +81,20 @@ ViewController (화면 업데이트)
 - `UserListViewModel` : 로직 실행  
 ![image](https://github.com/user-attachments/assets/b936ce1a-5925-42f8-b205-20742881316f)   
 ![image](https://github.com/user-attachments/assets/622a1eff-f305-43d6-a462-95fec8e10828)   
-![image](https://github.com/user-attachments/assets/0809518f-93f5-418a-9544-8c3304bd536d)   
+![image](https://github.com/user-attachments/assets/0809518f-93f5-418a-9544-8c3304bd536d)    
 
-
-
-  
 - `UserListUsecase` : 데이터 요청  
-  
+![image](https://github.com/user-attachments/assets/74af047a-c992-42fa-9155-450abca225e2)   
+
 - `UserRepository` : 결과반환  
+![image](https://github.com/user-attachments/assets/651e064b-872a-47a0-b52e-71bf807c4e04)   
   
 - `UserCoreData`
-  
+![image](https://github.com/user-attachments/assets/05de6fca-f081-414c-b55f-cd023897f61b)    
+
 - `UserListViewModel` : 바인딩  
-![image](https://github.com/user-attachments/assets/c816fdab-44c4-49e4-bc82-4525f9101cd0)
+![image](https://github.com/user-attachments/assets/c816fdab-44c4-49e4-bc82-4525f9101cd0)   
+![image](https://github.com/user-attachments/assets/b471439f-3d02-499f-b373-046191e6e5fe)   
 
 
 
