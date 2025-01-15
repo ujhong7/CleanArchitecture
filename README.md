@@ -72,28 +72,28 @@ ViewController (화면 업데이트)
 
 --- 
 
-**프로젝트 개요**
+### **프로젝트 개요**
 
 - 인원: 1명
 - 기간: 2025.01. ~ 2025.01.
 
-**한 줄 소개**
+### **한 줄 소개**
 
 - MVVM 패턴과 클린 아키텍처를 적용하여, 사용자 목록을 관리하는 기능을 구현한 예제입니다.   
 GitHub API를 통해 사용자 정보를 검색하고, 즐겨찾기 기능을 Core Data와 연동하여 관리합니다.   
 
-**앱 미리보기**
+### **앱 미리보기**
 
 …
 
-**기술스택**
+### **기술스택**
 
 - **언어**: Swift
 - **라이브러리**: Alamofire, CoreData, RxSwift, Kingfisher, Snapkit
 - **아키텍처**: MVVM, Clean Architecture
 - **기타**: UIKit, URLSession, NSManagedObjectContext
 
-**아키텍처 설계**
+### **아키텍처 설계**
 
 - **MVVM 패턴**: 비즈니스 로직을 ViewModel에 캡슐화하고, UI는 View와 ViewModel 간의 바인딩을 통해 데이터 변경을 반영합니다.
 - **Clean Architecture**: 각 레이어가 명확하게 분리되어 있으며, 의존성 역전 원칙을 준수하여 코드의 유지보수성과 확장성을 높였습니다.
@@ -116,7 +116,7 @@ GitHub API를 통해 사용자 정보를 검색하고, 즐겨찾기 기능을 Co
         - UserCoreData: Core Data를 이용해 사용자 정보를 로컬에 저장 및 관리합니다.
         - UserRepository: 두 데이터 소스를 통합 관리하며, 데이터를 일관성 있게 처리하고 도메인 레이어에 필요한 형태로 제공합니다.
 
-**구현내용**
+### **구현내용**
 
 - **사용자 목록 검색**:
     
