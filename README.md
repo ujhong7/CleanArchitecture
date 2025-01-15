@@ -95,8 +95,10 @@ GitHub API를 통해 사용자 정보를 검색하고, 즐겨찾기 기능을 Co
 
 ### **아키텍처 설계**
 
-- **MVVM 패턴**: 비즈니스 로직을 ViewModel에 캡슐화하고, UI는 View와 ViewModel 간의 바인딩을 통해 데이터 변경을 반영합니다.    
-- **Clean Architecture**: 각 레이어가 명확하게 분리되어 있으며, 의존성 역전 원칙을 준수하여 코드의 유지보수성과 확장성을 높였습니다.    
+- **MVVM 패턴**:      
+  비즈니스 로직을 ViewModel에 캡슐화하고, UI는 View와 ViewModel 간의 바인딩을 통해 데이터 변경을 반영합니다.    
+- **Clean Architecture**:     
+  각 레이어가 명확하게 분리되어 있으며, 의존성 역전 원칙을 준수하여 코드의 유지보수성과 확장성을 높였습니다.    
     - **Presentation Layer (View & ViewModel):**   
         - ViewModel은 UI와 상호작용하며, 뷰(View)에서 필요한 데이터를 가공하고 비즈니스 로직을 처리한 후, UI에 바인딩할 준비를 합니다.
         - RxSwift를 활용하여 ViewModel과 View 간 데이터 바인딩을 구현해 상태 변화를 반응형으로 처리하고 UI 업데이트를 간소화했습니다.
