@@ -18,7 +18,7 @@ public final class UserListViewModel: UserListViewModelProtocol {
     private let usecase: UserListUsecaseProtocol
     private let disposeBag = DisposeBag()
     private let error = PublishRelay<String>()
-    private let fetchUserList = BehaviorRelay<[UserListItem]>(value: [])
+    private let fetchUserList = BehaviorRelay<[UserListItem]>(value: []) // 검색 결과로 받아온 사용자 리스트
     private let allFavoriteUserList = BehaviorRelay<[UserListItem]>(value: []) // 즐겨찾기 여부를 위한 전체목록
     private let favoriteUserList = BehaviorRelay<[UserListItem]>(value: []) // 목록에 보여줄 리스트
     private var page: Int = 1
@@ -30,16 +30,16 @@ public final class UserListViewModel: UserListViewModelProtocol {
     // 이벤트 (VC) -> 가공 or 외부에서 데이터 호출 or 뷰데이터를 전달 (VM) -> VC
     
     public struct Input { // VM 에게 전달되어야 할 이벤트
-        let tabButtonType: Observable<TabButtonType>
-        let query: Observable<String>
-        let saveFavorite: Observable<UserListItem>
-        let deleteFavorite: Observable<Int>
-        let fetchMore: Observable<Void>
+        let tabButtonType: Observable<TabButtonType> // 탭 전환 이벤트 (API 탭/ 즐겨찾기 탭)
+        let query: Observable<String> // 검색어 입력
+        let saveFavorite: Observable<UserListItem> // 즐겨찾기 저장 요청
+        let deleteFavorite: Observable<Int> // 즐겨찾기 삭제 요청
+        let fetchMore: Observable<Void> // 추가 데이터 요청
     }
     
     public struct Output { // VC 에게 전달할 뷰 데이터
-        let cellData: Observable<[UserListCellData]>
-        let error: Observable<String>
+        let cellData: Observable<[UserListCellData]> // 뷰에 필요한 셀 데이터
+        let error: Observable<String> // 에러 메시지
     }
     
     public func transform(input: Input) -> Output { // VC 이벤트 -> VM 데이터

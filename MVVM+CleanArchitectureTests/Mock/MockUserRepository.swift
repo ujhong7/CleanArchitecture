@@ -11,7 +11,7 @@ import Foundation
 public struct MockUserRepository: UserRepositoryProtocol {
     
     public func fetchUser(query: String, page: Int) async -> Result<MVVM_CleanArchitecture.UserListResult, MVVM_CleanArchitecture.NetworkError> {
-        .failure(.detaNil)
+        .failure(.dataNil)
     }
     
     public func getFavoriteUsers() -> Result<[MVVM_CleanArchitecture.UserListItem], MVVM_CleanArchitecture.CoreDataError> {

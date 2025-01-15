@@ -11,7 +11,7 @@ public enum NetworkError: Error {
     case urlError
     case invalidResponse
     case failToDecode(String)
-    case detaNil
+    case dataNil
     case serverError(Int)
     case requestFailed(String)
     
@@ -23,7 +23,7 @@ public enum NetworkError: Error {
             "응답값이 유효하지 않습니다."
         case .failToDecode(let description):
             "디코딩 에러 \(description)"
-        case .detaNil:
+        case .dataNil:
             "데이터가 없습니다."
         case .serverError(let statusCode):
             "서버에러 \(statusCode)"

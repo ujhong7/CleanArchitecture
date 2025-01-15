@@ -17,6 +17,7 @@ class UserListViewController: UIViewController {
     private let saveFavorite = PublishRelay<UserListItem>()
     private let deleteFavorite = PublishRelay<Int>()
     private let fetchMore = PublishRelay<Void>()
+    
     private let searchTextField = {
         let textfield = UITextField()
         textfield.layer.borderWidth = 1
@@ -51,11 +52,12 @@ class UserListViewController: UIViewController {
         let tabButtonType = tabButtonView.selectedType.compactMap { $0 }
         let query = searchTextField.rx.text.orEmpty.debounce(.milliseconds(300), scheduler: MainScheduler.instance)
         
-        let output = viewModel.transform(input: UserListViewModel.Input(tabButtonType: tabButtonType, query: query, saveFavorite: saveFavorite.asObservable(), deleteFavorite: deleteFavorite.asObservable(), fetchMore: fetchMore.asObservable()))
+        let output = viewModel.transform(input: UserListViewModel.Input(tabButtonType: tabButtonType, query: query, saveFavorite: saveFavorite.asObservable(), 
+                                                                        deleteFavorite: deleteFavorite.asObservable(), fetchMore: fetchMore.asObservable()))
         
         output.cellData.bind(to: tableView.rx.items) { [weak self] tableView, index, cellData in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellData.id) else { return UITableViewCell() }
-            (cell as? UserListCellProtocol)?.apply(cellData: cellData)
+            (cell as? UserListCellProtocol)?.apply(cellData: cellData) // 셀에 데이터 넣어줌
             
             if let cell = cell as? UserTableViewCell, case let .user(user, isFavorite) = cellData {
                 cell.favoriteButton.rx.tap.bind {

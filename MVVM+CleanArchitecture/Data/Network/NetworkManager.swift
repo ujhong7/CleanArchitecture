@@ -34,7 +34,7 @@ public class NetworkManager: NetworkManagerProtocol {
         }
         let result = await session.request(url, method: method, parameters: parameters, headers: tokenHeader).serializingData().response
         if let error = result.error { return .failure(.requestFailed(error.localizedDescription))}
-        guard let data = result.data else { return .failure(.detaNil) }
+        guard let data = result.data else { return .failure(.dataNil) }
         guard let response = result.response else { return .failure(.invalidResponse) }
         if 200..<400 ~= response.statusCode {
             do {

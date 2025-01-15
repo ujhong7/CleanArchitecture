@@ -32,6 +32,8 @@
 		1D9940172D2F771500074D18 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940162D2F771500074D18 /* TabButtonView.swift */; };
 		1D9940192D2F775C00074D18 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9940182D2F775C00074D18 /* UserTableViewCell.swift */; };
 		1D99401B2D2F86CF00074D18 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99401A2D2F86CF00074D18 /* HeaderTableViewCell.swift */; };
+		1D99401D2D377AD800074D18 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99401C2D377AD800074D18 /* UserListViewModelTests.swift */; };
+		1D99401F2D377B3400074D18 /* MockUserUsercase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99401E2D377B3400074D18 /* MockUserUsercase.swift */; };
 		44D2ACD4F2EB8ADF9DC3570F /* Pods_MVVM_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */; };
 		59145616A13D532937740833 /* Pods_MVVM_CleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ABEF76B408CC46CF6E17FA /* Pods_MVVM_CleanArchitectureTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		1D9940162D2F771500074D18 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
 		1D9940182D2F775C00074D18 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		1D99401A2D2F86CF00074D18 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1D99401C2D377AD800074D18 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		1D99401E2D377B3400074D18 /* MockUserUsercase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserUsercase.swift; sourceTree = "<group>"; };
 		214BAB9C743658FB4B311F6E /* Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture_MVVM_CleanArchitectureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D12DEDB017C683DB86084 /* Pods_MVVM_CleanArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_CleanArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5253F409B6D17DF9AEB7B889 /* Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests/Pods-MVVM+CleanArchitecture-MVVM+CleanArchitectureUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +166,6 @@
 			children = (
 				1D993FB92D2C28EF00074D18 /* AppDelegate.swift */,
 				1D993FBB2D2C28EF00074D18 /* SceneDelegate.swift */,
-				1D993FBD2D2C28EF00074D18 /* UserListViewController.swift */,
 				1D9940112D2E282C00074D18 /* Presentation */,
 				1D993FF72D2CBA5900074D18 /* Data */,
 				1D993FE92D2C2C7700074D18 /* Domain */,
@@ -176,8 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				1D993FD02D2C28F000074D18 /* MVVM_CleanArchitectureTests.swift */,
-				1D99400A2D2E1CE100074D18 /* UserUsecaseTests.swift */,
 				1D99400C2D2E21D200074D18 /* Mock */,
+				1D99400A2D2E1CE100074D18 /* UserUsecaseTests.swift */,
+				1D99401C2D377AD800074D18 /* UserListViewModelTests.swift */,
 			);
 			path = "MVVM+CleanArchitectureTests";
 			sourceTree = "<group>";
@@ -267,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				1D99400F2D2E228000074D18 /* MockUserRepository.swift */,
+				1D99401E2D377B3400074D18 /* MockUserUsercase.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 		1D9940152D2F770200074D18 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D993FBD2D2C28EF00074D18 /* UserListViewController.swift */,
 				1D9940162D2F771500074D18 /* TabButtonView.swift */,
 				1D9940182D2F775C00074D18 /* UserTableViewCell.swift */,
 				1D99401A2D2F86CF00074D18 /* HeaderTableViewCell.swift */,
@@ -571,8 +577,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D9940102D2E228000074D18 /* MockUserRepository.swift in Sources */,
+				1D99401D2D377AD800074D18 /* UserListViewModelTests.swift in Sources */,
 				1D99400B2D2E1CE100074D18 /* UserUsecaseTests.swift in Sources */,
 				1D993FD12D2C28F000074D18 /* MVVM_CleanArchitectureTests.swift in Sources */,
+				1D99401F2D377B3400074D18 /* MockUserUsercase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
