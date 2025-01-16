@@ -89,9 +89,9 @@ GitHub API를 통해 사용자 정보를 검색하고, 즐겨찾기 기능을 Co
 ### **기술스택**
 
 - **언어**: Swift
-- **라이브러리**: Alamofire, CoreData, RxSwift, Kingfisher, Snapkit
+- **라이브러리**: RxSwift, Alamofire, Kingfisher, Snapkit
 - **아키텍처**: MVVM, Clean Architecture
-- **기타**: UIKit, URLSession, NSManagedObjectContext
+- **기타**: UIKit, URLSession, CoreData, NSManagedObjectContext
 
 ### **아키텍처 설계**
 
